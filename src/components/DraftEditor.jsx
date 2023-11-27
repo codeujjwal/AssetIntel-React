@@ -143,6 +143,7 @@ const DraftEditor = () => {
       // To set the inline style and update text
       setEditorState(RichUtils.toggleBlockType(newEditorState, "header-one"));
     }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contentText]);
 
   const saveToLocalStorage = () => {
