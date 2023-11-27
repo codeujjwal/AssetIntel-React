@@ -44,12 +44,12 @@ const DraftEditor = () => {
           focusOffset: contentText.indexOf("* ") + 2,
         }),
         "",
-        contentState.getSelectionAfter()
+        contentState.getSelectionAfter(),
       );
       const newEditorState = EditorState.push(
         editorState,
         newContent,
-        "insert-characters"
+        "insert-characters",
       );
 
       // To set the inline style and update text
@@ -66,12 +66,12 @@ const DraftEditor = () => {
           focusOffset: contentText.indexOf("** ") + 3,
         }),
         "",
-        contentState.getSelectionAfter()
+        contentState.getSelectionAfter(),
       );
       const newEditorState = EditorState.push(
         editorState,
         newContent,
-        "insert-characters"
+        "insert-characters",
       );
 
       // To set the inline style and update text
@@ -88,12 +88,12 @@ const DraftEditor = () => {
           focusOffset: contentText.indexOf("*** ") + 4,
         }),
         "",
-        contentState.getSelectionAfter()
+        contentState.getSelectionAfter(),
       );
       const newEditorState = EditorState.push(
         editorState,
         newContent,
-        "insert-characters"
+        "insert-characters",
       );
 
       // To set the inline style and update text
@@ -110,12 +110,12 @@ const DraftEditor = () => {
           focusOffset: contentText.indexOf("``` ") + 4,
         }),
         "",
-        contentState.getSelectionAfter()
+        contentState.getSelectionAfter(),
       );
       const newEditorState = EditorState.push(
         editorState,
         newContent,
-        "insert-characters"
+        "insert-characters",
       );
 
       // To set the inline style and update text
@@ -132,18 +132,18 @@ const DraftEditor = () => {
           focusOffset: contentText.indexOf("# ") + 2,
         }),
         "",
-        contentState.getSelectionAfter()
+        contentState.getSelectionAfter(),
       );
       const newEditorState = EditorState.push(
         editorState,
         newContent,
-        "insert-characters"
+        "insert-characters",
       );
 
       // To set the inline style and update text
       setEditorState(RichUtils.toggleBlockType(newEditorState, "header-one"));
     }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [contentText]);
 
   const saveToLocalStorage = () => {
@@ -156,7 +156,6 @@ const DraftEditor = () => {
   return (
     <div id="draft-editor" className="editor">
       <div className="header-container">
-        <div className="flex-1" />
         <h3 className="heading flex-1">Demo Editor by Ujjwal Sharma</h3>
         <div className="flex-1">
           <button className="button" onClick={saveToLocalStorage}>
